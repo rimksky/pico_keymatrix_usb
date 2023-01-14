@@ -18,7 +18,7 @@ raspberry pi picoを使った自作キーマトリックスUSBデバイス
 1. GP16に接続されているキー(0x00)を押しながら、USBにpicoを接続すると、ストレージとシリアルポートが見えるようになる。
 
 ## How to Uninstall
-1. どうしてもストレージのマウントができなくなった場合は、picoのフラッシュをクリアする必要がある。
+どうしてもストレージのマウントができなくなった場合は、picoのフラッシュをクリアする必要がある。
 1. Raspberry Pi の公式URLから の flash_nuke.uf2 をダウンロードする。  
 [flash_nuke.uf2](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)
 1. BOOTSEL ボタンを押しながら pico をUSBでPCに接続し、接続されたストレージにUF2ファイルをコピーする。
