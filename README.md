@@ -4,7 +4,8 @@ raspberry pi picoを使った自作キーマトリックスUSBデバイス
 ![pico_keymatrix.png](pico_keymatrix.png)
 
 # Features
-* 4x3 の自作キーマトリックスを USBキーボートとして認識させ、各キーに自由にキーマッピングや複数のキーコードの送出ができます。
+* 4x3 の自作キーマトリックスを USBキーボートとして認識させ、各キーに自由にキーマッピングや複数のキーコードの送出ができる。
+* キースキャンは、0.05秒ごとに行うようシミュレーションしている。(割り込み処理は行っていない。) キーマトリックスの回路とキースキャンの実装により、複数のキーを押したタイミング、キーを話したタイミングを知ることができる。
 
 # Usage
 ## How to Install
@@ -39,7 +40,7 @@ code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(Ke
 # License
 MIT LICENSE
 
-## Author
+# Author
 * [rimksky][]
 
 [rimksky]: https://github.com/rimksky "rimksky"
