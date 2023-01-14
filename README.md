@@ -38,3 +38,4 @@ code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(Ke
 # Author
 
 # Licence
+MIT LISENCE
