@@ -34,6 +34,7 @@ code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(Ke
 # Reference
 * [Circuit Python (Raspberry Pi Pico)](https://circuitpython.org/board/raspberry_pi_pico/)
 * [CircuitPython HID Keyboard and Mouse](https://learn.adafruit.com/circuitpython-essentials/circuitpython-hid-keyboard-and-mouse)
+* [Adafruit_CircuitPython_HID (github)](https://github.com/adafruit/Adafruit_CircuitPython_HID)
 
 # License
 MIT LICENSE
