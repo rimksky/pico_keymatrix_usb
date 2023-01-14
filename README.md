@@ -1,0 +1,2 @@
+# pico_keymatrix_usb
+raspberry pi picoを使った自作キーマトリックスUSBデバイス
