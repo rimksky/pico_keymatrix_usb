@@ -1,33 +1,33 @@
 # pico_keymatrix_usb
-raspberry pi picoを使った自作キーマトリックスUSBデバイス
+Homebrew key matrix usb device with raspberry pi pico.
 
 ![pico_keymatrix.png](doc/pico_keymatrix.png)
 
 # Features
-* 4x3 の自作キーマトリックスを USBキーボートとして認識させ、各キーに自由にキーマッピングや複数のキーコードの送出ができる。
-* キースキャンは、0.05秒ごとに行うようシミュレーションしている。(割り込み処理は行っていない。) キーマトリックスの回路とキースキャンの実装により、複数のキーを押したタイミング、キーを離したタイミングを知ることができる。
+* The 4x3 key matrix can be recognized as a USB keyboard, and each key can be freely mapped and multiple key codes can be sent.
+* Key scan is simulated to be performed every 0.05 seconds. No interrupt processing is performed. By implementing a key matrix circuit and software key scan, it is possible to know when multiple keys are pressed and when a key is released.
 
 # Usage
 ## How to Install
-1. Circuit Python v7 の UF2 イメージをダウンロードする。(adafruit-circuitpython-raspberry_pi_pico-ja-7.3.3.uf2)  
-[Circuit Python (Raspberry Pi Pico)](https://circuitpython.org/board/raspberry_pi_pico/)
-1. BOOTSEL ボタンを押しながら pico をUSBでPCに接続し、接続されたストレージにUF2ファイルをコピーする。
-1. ストレージにできた lib フォルダに pico_keymatrix_usb/lib/adafruit_hid フォルダをコピーする。
-1. ストレージの直下に boot.py code.py をコピーする。
+1. Download the UF2 image for CircuitPython v7. (adafruit-circuitpython-raspberry_pi_pico-ja-7.3.3.uf2)  
+[CircuitPython (Raspberry Pi Pico)](https://circuitpython.org/board/raspberry_pi_pico/)
+1. While pressing the BOOTSEL button, connect pico to your PC via USB and copy the UF2 file to the connected storage.
+1. Copy the pico_keymatrix_usb/lib/adafruit_hid folder to the lib folder mounted as the storage.
+1. Copy pico_keymatrix_usb/boot.py pico_keymatrix_usb/code.py files directly under storage.
 
-## How to mount storage on pico
-1. GP16に接続されているキー(0x00)を押しながら、USBにpicoを接続すると、ストレージとシリアルポートが見えるようになる。
+## How to Mount Storage of Pico
+1. If you connect pico to USB while pressing the key (0x00) connected to GP16, you can see the storage and serial port by CircuitPython.
 
 ## How to Uninstall
-どうしてもストレージのマウントができなくなった場合は、picoのフラッシュをクリアする必要がある。
-1. Raspberry Pi の公式URLから の flash_nuke.uf2 をダウンロードする。  
+If you cannot mount the storage by any means, you need to clear the flash of pico.
+1. Download flash_nuke.uf2 from the official Raspberry Pi URL.  
 [flash_nuke.uf2](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)
-1. BOOTSEL ボタンを押しながら pico をUSBでPCに接続し、接続されたストレージにUF2ファイルをコピーする。
+1. While pressing the BOOTSEL button, connect pico to your PC via USB and copy the UF2 file to the connected storage.
 
-## How to modify Key Mapping
-各キーは、0番～11番の番号が割り振られている。
-code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(KeyTurnOn)のキーコードの送出を定義できる。 キーが離されたとき(KeyTurnOff)などもトリガーにできる。
-キーコードの送出は、lib/adafruit_hid/keycode.mpy などを参照するとよい。
+## How to Modify Key Mapping
+Each key is assigned a number from 0 to 11.  
+In the sendKeycode() function in code.py, you can define sending keycodes when each key is pressed (KeyTurnOn). It can also be triggered when a key is released (KeyTurnOff).  
+Refer to lib/adafruit_hid/keycode.mpy for sending keycode.
 
 # Circuit
 ![circuit.png](doc/circuit.png)
