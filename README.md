@@ -1,7 +1,7 @@
 # pico_keymatrix_usb
 raspberry pi picoを使った自作キーマトリックスUSBデバイス
 
-![pico_keymatrix.png](pico_keymatrix.png)
+![pico_keymatrix.png](doc/pico_keymatrix.png)
 
 # Features
 * 4x3 の自作キーマトリックスを USBキーボートとして認識させ、各キーに自由にキーマッピングや複数のキーコードの送出ができる。
@@ -30,7 +30,7 @@ code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(Ke
 キーコードの送出は、lib/adafruit_hid/keycode.mpy などを参照するとよい。
 
 # Circuit
-![circuit.png](circuit.png)
+![circuit.png](doc/circuit.png)
 
 # Reference
 * [Circuit Python (Raspberry Pi Pico)](https://circuitpython.org/board/raspberry_pi_pico/)
