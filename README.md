@@ -24,7 +24,7 @@ raspberry pi picoを使った自作キーマトリックスUSBデバイス
 [flash_nuke.uf2](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)
 1. BOOTSEL ボタンを押しながら pico をUSBでPCに接続し、接続されたストレージにUF2ファイルをコピーする。
 
-## How to modified keymap
+## How to modify Key Mapping
 各キーは、0番～11番の番号が割り振られている。
 code.py 内の sendKeycode() 関数内にて、各キーが押されたとき(KeyTurnOn)のキーコードの送出を定義できる。 キーが離されたとき(KeyTurnOff)などもトリガーにできる。
 キーコードの送出は、lib/adafruit_hid/keycode.mpy などを参照するとよい。
