@@ -93,6 +93,8 @@ def getBitString( target ):
 def sendKeycode():
 	global kbd, Keycode, time, keyState, keyTurnOn, keyTurnOff
 
+	# Sample: cheat command for Age of Empires Definitive Edition
+
 	# keycode: 0x00
 	if checkBit( keyTurnOn, 0):
 		kbd.send(Keycode.ENTER)
@@ -189,6 +191,7 @@ def sendKeycode():
 		kbd.send(Keycode.ENTER)
 		time.sleep(0.15)
 		kbd.send(Keycode.E)
+		# JP Keyboard '='
 		kbd.send(Keycode.SHIFT, Keycode.MINUS)
 		kbd.send(Keycode.M)
 		kbd.send(Keycode.C)
@@ -232,16 +235,11 @@ def sendKeycode():
 	if checkBit( keyTurnOn, 9):
 		kbd.send(Keycode.ENTER)
 		time.sleep(0.15)
-		kbd.send(Keycode.R)
-		kbd.send(Keycode.E)
-		kbd.send(Keycode.V)
-		kbd.send(Keycode.E)
+		kbd.send(Keycode.T)
 		kbd.send(Keycode.A)
 		kbd.send(Keycode.L)
-		kbd.send(Keycode.SPACE)
-		kbd.send(Keycode.M)
-		kbd.send(Keycode.A)
-		kbd.send(Keycode.P)
+		kbd.send(Keycode.L)
+		kbd.send(Keycode.Y)
 		kbd.send(Keycode.ENTER)
 
 	# keycode: 0x0a
